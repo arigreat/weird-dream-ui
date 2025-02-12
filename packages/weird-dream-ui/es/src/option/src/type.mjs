@@ -7,6 +7,9 @@ const optionProps = {
   },
   value: {
     type: String
+  },
+  text: {
+    type: String
   }
 };
 export {

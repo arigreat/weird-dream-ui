@@ -5,7 +5,7 @@ const _hoisted_1 = ["min", "max", "step"];
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "slidebar",
   props: /* @__PURE__ */ mergeModels(slidebarProps, {
-    "modelValue": { type: Number, default: 0 },
+    "modelValue": { type: String, default: "0" },
     "modelModifiers": {}
   }),
   emits: /* @__PURE__ */ mergeModels(["value"], ["update:modelValue"]),

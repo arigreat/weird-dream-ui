@@ -48,6 +48,8 @@ $color-info: #7D7D7D !default;
 -------------------------- */
 /* Icon
 -------------------------- */
+/* Option
+-------------------------- */
 /* Select
 -------------------------- */
 /* Alert
@@ -168,6 +170,81 @@ $color-info: #7D7D7D !default;
 -------------------------- */
 /* Break-point
 -------------------------- */
+.wd-selectContainer {
+  position: relative;
+  min-width: 180px;
+}
+.wd-selectContainer::before,
+.wd-selectContainer::after {
+  display: table;
+  content: "";
+}
+
+.wd-selectContainer::after {
+  clear: both;
+}
+
 .wd-select {
-  width: 70%;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.wd-select-primary {
+  border: 1px solid #13c2c2;
+}
+
+.wd-selectbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 2px;
+  font-size: 14px;
+  z-index: 220;
+}
+.wd-selectbox::before,
+.wd-selectbox::after {
+  display: table;
+  content: "";
+}
+
+.wd-selectbox::after {
+  clear: both;
+}
+
+.wd-selectbox-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  border: hidden;
+}
+.wd-selectbox-column.is-open {
+  max-height: 200px;
+  border: 1px solid #dddfe5;
+}
+
+.wd-selectarrow {
+  transition: transform 0.2s ease;
+}
+.wd-selectarrow.is-open {
+  transform: rotate(-90deg);
+}
+
+.wd-selectarrow-primary {
+  color: #13c2c2;
 }

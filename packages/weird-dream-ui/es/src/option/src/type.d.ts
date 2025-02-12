@@ -8,4 +8,7 @@ export declare const optionProps: {
     value: {
         type: StringConstructor;
     };
+    text: {
+        type: StringConstructor;
+    };
 };

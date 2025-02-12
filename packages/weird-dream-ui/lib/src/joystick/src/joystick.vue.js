@@ -49,13 +49,11 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
         joystickDiscLeft = element.elementRealLeft(joystickDisc);
         joystickDiscTop = element.elementRealTop(joystickDisc);
       }
-      document.addEventListener("scroll", handleScrollNresize);
-      document.addEventListener("resize", handleScrollNresize);
-      joystickStick.addEventListener("mousedown", (e) => {
+      function mousedownHandler(e) {
         handleScrollNresize();
         ifJoystickMoused = true;
-      });
-      document.addEventListener("mousemove", (e) => {
+      }
+      function mousemoveHandler(e) {
         if (!ifJoystickMoused) {
           return;
         }
@@ -77,8 +75,8 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
           modelX.value = valueX.value;
           modelY.value = valueY.value;
         });
-      });
-      document.addEventListener("mouseup", () => {
+      }
+      function mouseupHandler(e) {
         if (ifJoystickMoused) {
           ifJoystickMoused = false;
           joystickStick.style.left = `${joystickStickDefault}px`;
@@ -92,6 +90,18 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
             emits("value", valueX.value, valueY.value);
           });
         }
+      }
+      document.addEventListener("scroll", handleScrollNresize);
+      document.addEventListener("resize", handleScrollNresize);
+      joystickStick.addEventListener("mousedown", mousedownHandler);
+      document.addEventListener("mousemove", mousemoveHandler);
+      document.addEventListener("mouseup", mouseupHandler);
+      vue.onBeforeUnmount(() => {
+        document.removeEventListener("scroll", handleScrollNresize);
+        document.removeEventListener("resize", handleScrollNresize);
+        joystickStick.removeEventListener("mousedown", mousedownHandler);
+        document.removeEventListener("mousemove", mousemoveHandler);
+        document.removeEventListener("mouseup", mouseupHandler);
       });
     });
     return (_ctx, _cache) => {
