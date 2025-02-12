@@ -1,0 +1,32 @@
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
+
+@include b(input){
+    border: 1px solid;
+    border-color: $input-default-color;
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px;
+
+    height: 25px;
+    width: 60%;
+    max-width: 500px;
+    min-width: 80px;
+
+    &:hover{
+        border-color: $input-hover-color;
+    }
+
+    &:focus{
+        border-color: $input-primary-color;
+    }
+
+    &::-ms-reveal{
+        display:block;
+    }
+
+    @include m(warning){
+        border-color: red !important;
+    }
+}

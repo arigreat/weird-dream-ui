@@ -1,0 +1,22 @@
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
+
+@include b(checkbox-group){
+    display: inline-block;
+    text-align: start;
+    padding: 20px;
+    width: 70%;
+
+    & > .wd-checkbox + .wd-checkbox {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 20px;
+    }
+
+    & > .wd-checkbox:nth-of-type(1) {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-right: 20px;
+    }
+}

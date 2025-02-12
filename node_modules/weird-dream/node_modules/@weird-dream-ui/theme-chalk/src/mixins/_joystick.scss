@@ -1,0 +1,14 @@
+@use '../common/var' as *;
+@use '../mixins/mixins.scss' as *;
+
+@mixin joystick_size($size){
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+}
+
+@mixin joystick_position($stickSize){
+    left: calc(50% - $stickSize / 2);
+    top: calc(50% - $stickSize / 2);
+}
+

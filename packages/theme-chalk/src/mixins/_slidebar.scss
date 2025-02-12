@@ -1,0 +1,84 @@
+@use '../common/var' as *;
+@use '../mixins/mixins.scss' as *;
+@use 'sass:color';
+
+@mixin slidebar-thumb-size($thumb_size){
+    &::-webkit-slider-thumb{
+        position: relative;
+        -webkit-appearance: none;
+        appearance: none;
+        width: $thumb_size;
+        height: $thumb_size;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    &::-moz-range-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: $thumb_size;
+        height: $thumb_size;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}
+
+@mixin slidebar-thumb-color($thumb_color){
+    &::-webkit-slider-thumb{
+        background-color: $thumb_color;
+        box-shadow: $slidebar-thumb-boxshadow;
+    }
+    &::-moz-range-thumb {
+        background-color: $thumb_color;
+        box-shadow: $slidebar-thumb-boxshadow;
+    }
+}
+
+@mixin slidebar-fill-default($fillcolor){
+    overflow: hidden;
+    @content;
+    @include slidebar-thumb-color(color.mix($fillcolor,#fff,100%));
+    border: 1px $slidebar-blankspace-color solid;
+
+    &::-webkit-slider-thumb {
+        border-image: linear-gradient(to right, $fillcolor 0%, $fillcolor 100%) 0 fill / 0 10px 0 0 / 0 0 0 100vw; 
+    }
+    &::-moz-range-thumb {
+        border-image: linear-gradient(to right, $fillcolor 0%, $fillcolor 100%) 0 fill / 0 10px 0 0 / 0 0 0 100vw; 
+    } 
+}
+
+@mixin slidebar-fill-stripe($fillcolor) {
+    overflow: hidden;
+    // border: 1px $slidebar-blankspace-color solid;
+    @content;
+    &::-webkit-slider-thumb {
+        width: 0px;
+        height: 100px;
+        border-image: repeating-linear-gradient(-45deg, color.mix($fillcolor,#fff,30%) 0 15px, $fillcolor 10px 30px) 0 fill / 0 0 0 0 / 0 0 0 100vw;
+    }
+    &::-moz-range-thumb {
+        width: 0px;
+        height: 100px;
+        border-image: repeating-linear-gradient(45deg, color.mix($fillcolor,#fff,30%) 0 15px, $fillcolor 10px 30px) 0 fill / 0 0 0 0 / 0 0 0 100vw;
+    } 
+}
+
+@mixin slidebar-fill-gradient($fillcolor) {
+    overflow: hidden;
+    border: 1px $slidebar-blankspace-color solid;
+    @include slidebar-thumb-color(color.mix($fillcolor,#000,100%));
+    &::-webkit-slider-thumb {
+        border-image: linear-gradient(to right,color.mix($fillcolor,#fff,0%) 0%,color.mix($fillcolor,#fff,0%) 20%, color.mix($fillcolor,#000,100%) 95%, color.mix($fillcolor,#000,100%) 100%) 0 fill / 0 15px 0 0 / 0 0 0 600px;
+    }
+    &::-moz-range-thumb {
+        border-image: linear-gradient(to right,color.mix($fillcolor,#fff,0%) 0%,color.mix($fillcolor,#fff,0%) 20%, color.mix($fillcolor,#000,100%) 95%, color.mix($fillcolor,#000,100%) 100%) 0 fill / 0 15px 0 0 / 0 0 0 600px;
+    } 
+    @content;
+}
+
+@mixin slidebar-fill-full($fillcolor) {
+    // overflow: hidden;
+    background-color: $fillcolor;
+    @include slidebar-thumb-color(color.mix($fillcolor,#fff,20%));
+    @content;
+}

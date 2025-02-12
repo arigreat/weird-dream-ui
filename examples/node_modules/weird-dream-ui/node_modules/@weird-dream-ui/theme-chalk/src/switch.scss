@@ -1,0 +1,315 @@
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
+
+@include b(switch){
+    border-radius: 30px;
+    box-shadow: $switch-boxshadow;
+    background-color: $switch-default-color;
+
+    & + &{
+        margin-top: 10px;
+    }
+
+    & > .wd-switch-stick{
+        border-radius: 100%;
+        position: relative;
+        background-color: white;
+        box-shadow: $switch-inner-boxshadow;
+        
+    }
+
+
+    @include m(tiny){
+        width: $switch-tiny-width;
+        height: $switch-tiny-height;      
+        & > .wd-switch-stick{
+            width: $switch-tiny-round;
+            height: $switch-tiny-round;
+            top: $switch-tiny-innerborder;
+            transform: translateX($switch-tiny-position-off);
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-tiny-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-tiny-switchChange-on){
+                    from { transform: translateX($switch-tiny-position-off); }
+                    to { transform: translateX($switch-tiny-position-on); }
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-tiny-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-tiny-switchChange-off){
+                    to { transform: translateX($switch-tiny-position-off); }
+                    from { transform: translateX($switch-tiny-position-on); }
+                }
+            }
+        }
+    }
+    @include m(mini){
+        width: $switch-mini-width;
+        height: $switch-mini-height;      
+        & > .wd-switch-stick{
+            width: $switch-mini-round;
+            height: $switch-mini-round;
+            top: $switch-mini-innerborder;
+            transform: translateX($switch-mini-position-off);
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-mini-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-mini-switchChange-on){
+                    from { transform: translateX($switch-mini-position-off); }
+                    to { transform: translateX($switch-mini-position-on); }
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-mini-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-mini-switchChange-off){
+                    to { transform: translateX($switch-mini-position-off); }
+                    from { transform: translateX($switch-mini-position-on); }
+                }
+            }
+        }
+    }
+    @include m(small){
+        width: $switch-small-width;
+        height: $switch-small-height;      
+        & > .wd-switch-stick{
+            width: $switch-small-round;
+            height: $switch-small-round;
+            top: $switch-small-innerborder;
+            transform: translateX($switch-small-position-off);
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-small-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-small-switchChange-on){
+                    from { transform: translateX($switch-small-position-off); }
+                    to { transform: translateX($switch-small-position-on); }
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-small-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-small-switchChange-off){
+                    to { transform: translateX($switch-small-position-off); }
+                    from { transform: translateX($switch-small-position-on); }
+                }
+            }
+        }
+    }            
+    @include m(medium){
+        width: $switch-medium-width;
+        height: $switch-medium-height;      
+        & > .wd-switch-stick{
+            width: $switch-medium-round;
+            height: $switch-medium-round;
+            top:$switch-medium-innerborder;
+            transform: translateX($switch-medium-position-off);
+            
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-medium-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-medium-switchChange-on){
+                    from{transform: translateX($switch-medium-position-off);}
+                    to{transform: translateX($switch-medium-position-on);}
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-medium-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-medium-switchChange-off){
+                    to{transform: translateX($switch-medium-position-off);}
+                    from{transform: translateX($switch-medium-position-on);}
+                }
+            }
+        }
+    }
+    @include m(large){
+        width: $switch-large-width;
+        height: $switch-large-height;      
+        & > .wd-switch-stick{
+            width: $switch-large-round;
+            height: $switch-large-round;
+            top: $switch-large-innerborder;
+            transform: translateX($switch-large-position-off);
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-large-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-large-switchChange-on){
+                    from { transform: translateX($switch-large-position-off); }
+                    to { transform: translateX($switch-large-position-on); }
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-large-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-large-switchChange-off){
+                    to { transform: translateX($switch-large-position-off); }
+                    from { transform: translateX($switch-large-position-on); }
+                }
+            }
+        }
+    }
+    @include m(huge){
+        width: $switch-huge-width;
+        height: $switch-huge-height;      
+        & > .wd-switch-stick{
+            width: $switch-huge-round;
+            height: $switch-huge-round;
+            top: $switch-huge-innerborder;
+            transform: translateX($switch-huge-position-off);
+        }
+        @include m(on){
+            & > .wd-switch-stick{
+                animation: wd-switch-huge-switchChange-on $switch-animation-time forwards;
+                @include keyframes(wd-switch-huge-switchChange-on){
+                    from { transform: translateX($switch-huge-position-off); }
+                    to { transform: translateX($switch-huge-position-on); }
+                }
+            }
+        }
+        @include m(off){
+            & > .wd-switch-stick{
+                animation: wd-switch-huge-switchChange-off $switch-animation-time forwards;
+                @include keyframes(wd-switch-huge-switchChange-off){
+                    to { transform: translateX($switch-huge-position-off); }
+                    from { transform: translateX($switch-huge-position-on); }
+                }
+            }
+        }
+    }
+
+    @include m(primary){
+        @include m(on){
+            animation: wd-switch-primary-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-primary-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-primary-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-primary-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-primary-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-primary-color;}
+            }
+        }
+    }
+
+    @include m(red){
+        @include m(on){
+            animation: wd-switch-red-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-red-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-red-color;}
+            }
+        }
+    
+        @include m(off){
+            animation: wd-switch-red-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-red-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-red-color;}
+            }
+        }
+    }
+
+    @include m(blue){
+        @include m(on){
+            animation: wd-switch-blue-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-blue-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-blue-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-blue-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-blue-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-blue-color;}
+            }
+        }
+    }
+
+    @include m(yellow){
+        @include m(on){
+            animation: wd-switch-yellow-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-yellow-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-yellow-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-yellow-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-yellow-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-yellow-color;}
+            }
+        }
+    }
+
+    @include m(black){
+        @include m(on){
+            animation: wd-switch-black-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-black-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-black-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-black-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-black-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-black-color;}
+            }
+        }
+    }
+
+    @include m(white){
+        @include m(on){
+            animation: wd-switch-white-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-white-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-white-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-white-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-white-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-white-color;}
+            }
+        }
+    }
+
+    @include m(pink){
+        @include m(on){
+            animation: wd-switch-pink-colorChange-on $switch-animation-time forwards;
+            @include keyframes(wd-switch-pink-colorChange-on){
+                from{background-color: $switch-default-color;}
+                to{background-color: $switch-pink-color;}
+            }
+        }
+        @include m(off){
+            animation: wd-switch-pink-colorChange-off $switch-animation-time forwards;
+            @include keyframes(wd-switch-pink-colorChange-off){
+                to{background-color: $switch-default-color;}
+                from{background-color: $switch-pink-color;}
+            }
+        }
+    }
+    
+    
+    
+}

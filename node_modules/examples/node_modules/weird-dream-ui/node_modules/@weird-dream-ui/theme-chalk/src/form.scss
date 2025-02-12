@@ -1,0 +1,39 @@
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
+
+@include b(form){
+    width: 500px;
+    // height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: $form-border-radius;
+    border: solid 1px $form-default-color;
+}
+
+@include b(formname){
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include m(left){
+        text-align: left;
+        padding-left: 30px;
+    
+    }
+    @include m(center){
+        text-align: center;
+    }
+    @include m(right){
+        text-align: right;
+        padding-right: 30px;
+    }
+}

@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/*
+    消除元素浮动
+    利用伪元素的clearboth
+*************************/
+/* Transition
+-------------------------- */
+/* Color #177DDC
+-------------------------- */
+/* light */
+/*
+$color-primary: #1890FF !default;
+$color-success: #52C41A !default;
+$color-warning: #FAAD14 !default;
+$color-danger: #F5222D !default;
+*/
+/* dark */
+/*
+$color-primary: #177DDC !default;
+$color-success: #49AA19 !default;
+$color-warning: #D89614 !default;
+$color-danger: #D32029 !default;
+$color-info: #7D7D7D !default;
+*/
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* carousel
+-------------------------- */
+/* joystick
+-------------------------- */
+/* switch
+-------------------------- */
+/* slidebar
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义 */
+/* height||Other|4 */
+/* height||Other|4 */
+/* Dialog
+-------------------------- */
+/* / fontLineHeight||LineHeight|2 */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+-------------------------- */
+/* Slider
+-------------------------- */
+/* / height|1|Other|4 */
+/* Steps
+-------------------------- */
+/* Menu
+-------------------------- */
+/* Rate
+-------------------------- */
+/* / height||Other|3 */
+/* / margin||Spacing|2 */
+/* DatePicker
+-------------------------- */
+/* Loading
+-------------------------- */
+/* Scrollbar
+-------------------------- */
+/* Carousel
+-------------------------- */
+/* / width||Other|4 */
+/* Collapse
+-------------------------- */
+/* Transfer
+-------------------------- */
+/* Header
+  -------------------------- */
+/* Footer
+-------------------------- */
+/* Main
+-------------------------- */
+/* Timeline
+-------------------------- */
+/* Backtop
+-------------------------- */
+/* Link
+-------------------------- */
+/* Calendar
+-------------------------- */
+/* / border||Other|4 */
+/* / color||Other|4 */
+/* Form
+-------------------------- */
+/* Input
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Avatar
+-------------------------- */
+/* Empty
+-------------------------- */
+/* Descriptions
+-------------------------- */
+/* Skeleton 
+-------------------------- */
+/* Svg
+--------------- */
+/* Result
+-------------------------- */
+/* Break-point
+-------------------------- */
+.wd-switch {
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  background-color: rgb(244.8, 244.8, 245.9);
+}
+.wd-switch + .wd-switch {
+  margin-top: 10px;
+}
+.wd-switch > .wd-switch-stick {
+  border-radius: 100%;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.wd-switch-tiny {
+  width: 35px;
+  height: 20px;
+}
+.wd-switch-tiny > .wd-switch-stick {
+  width: 12px;
+  height: 12px;
+  top: 4px;
+  transform: translateX(4px);
+}
+.wd-switch-tiny-on > .wd-switch-stick {
+  animation: wd-switch-tiny-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-tiny-switchChange-on {
+  from {
+    transform: translateX(4px);
+  }
+  to {
+    transform: translateX(19px);
+  }
+}
+
+.wd-switch-tiny-off > .wd-switch-stick {
+  animation: wd-switch-tiny-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-tiny-switchChange-off {
+  to {
+    transform: translateX(4px);
+  }
+  from {
+    transform: translateX(19px);
+  }
+}
+
+.wd-switch-mini {
+  width: 44px;
+  height: 24px;
+}
+.wd-switch-mini > .wd-switch-stick {
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  transform: translateX(4px);
+}
+.wd-switch-mini-on > .wd-switch-stick {
+  animation: wd-switch-mini-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-mini-switchChange-on {
+  from {
+    transform: translateX(4px);
+  }
+  to {
+    transform: translateX(24px);
+  }
+}
+
+.wd-switch-mini-off > .wd-switch-stick {
+  animation: wd-switch-mini-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-mini-switchChange-off {
+  to {
+    transform: translateX(4px);
+  }
+  from {
+    transform: translateX(24px);
+  }
+}
+
+.wd-switch-small {
+  width: 58px;
+  height: 34px;
+}
+.wd-switch-small > .wd-switch-stick {
+  width: 22px;
+  height: 22px;
+  top: 6px;
+  transform: translateX(6px);
+}
+.wd-switch-small-on > .wd-switch-stick {
+  animation: wd-switch-small-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-small-switchChange-on {
+  from {
+    transform: translateX(6px);
+  }
+  to {
+    transform: translateX(30px);
+  }
+}
+
+.wd-switch-small-off > .wd-switch-stick {
+  animation: wd-switch-small-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-small-switchChange-off {
+  to {
+    transform: translateX(6px);
+  }
+  from {
+    transform: translateX(30px);
+  }
+}
+
+.wd-switch-medium {
+  width: 70px;
+  height: 40px;
+}
+.wd-switch-medium > .wd-switch-stick {
+  width: 28px;
+  height: 28px;
+  top: 6px;
+  transform: translateX(6px);
+}
+.wd-switch-medium-on > .wd-switch-stick {
+  animation: wd-switch-medium-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-medium-switchChange-on {
+  from {
+    transform: translateX(6px);
+  }
+  to {
+    transform: translateX(36px);
+  }
+}
+
+.wd-switch-medium-off > .wd-switch-stick {
+  animation: wd-switch-medium-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-medium-switchChange-off {
+  to {
+    transform: translateX(6px);
+  }
+  from {
+    transform: translateX(36px);
+  }
+}
+
+.wd-switch-large {
+  width: 84px;
+  height: 46px;
+}
+.wd-switch-large > .wd-switch-stick {
+  width: 32px;
+  height: 32px;
+  top: 7px;
+  transform: translateX(7px);
+}
+.wd-switch-large-on > .wd-switch-stick {
+  animation: wd-switch-large-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-large-switchChange-on {
+  from {
+    transform: translateX(7px);
+  }
+  to {
+    transform: translateX(45px);
+  }
+}
+
+.wd-switch-large-off > .wd-switch-stick {
+  animation: wd-switch-large-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-large-switchChange-off {
+  to {
+    transform: translateX(7px);
+  }
+  from {
+    transform: translateX(45px);
+  }
+}
+
+.wd-switch-huge {
+  width: 96px;
+  height: 52px;
+}
+.wd-switch-huge > .wd-switch-stick {
+  width: 36px;
+  height: 36px;
+  top: 8px;
+  transform: translateX(8px);
+}
+.wd-switch-huge-on > .wd-switch-stick {
+  animation: wd-switch-huge-switchChange-on 0.2s forwards;
+}
+@keyframes wd-switch-huge-switchChange-on {
+  from {
+    transform: translateX(8px);
+  }
+  to {
+    transform: translateX(52px);
+  }
+}
+
+.wd-switch-huge-off > .wd-switch-stick {
+  animation: wd-switch-huge-switchChange-off 0.2s forwards;
+}
+@keyframes wd-switch-huge-switchChange-off {
+  to {
+    transform: translateX(8px);
+  }
+  from {
+    transform: translateX(52px);
+  }
+}
+
+.wd-switch-primary-on {
+  animation: wd-switch-primary-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-primary-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #13c2c2;
+  }
+}
+
+.wd-switch-primary-off {
+  animation: wd-switch-primary-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-primary-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #13c2c2;
+  }
+}
+
+.wd-switch-red-on {
+  animation: wd-switch-red-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-red-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #e44d7a;
+  }
+}
+
+.wd-switch-red-off {
+  animation: wd-switch-red-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-red-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #e44d7a;
+  }
+}
+
+.wd-switch-blue-on {
+  animation: wd-switch-blue-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-blue-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #88cafc;
+  }
+}
+
+.wd-switch-blue-off {
+  animation: wd-switch-blue-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-blue-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #88cafc;
+  }
+}
+
+.wd-switch-yellow-on {
+  animation: wd-switch-yellow-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-yellow-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #ffdf72;
+  }
+}
+
+.wd-switch-yellow-off {
+  animation: wd-switch-yellow-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-yellow-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #ffdf72;
+  }
+}
+
+.wd-switch-black-on {
+  animation: wd-switch-black-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-black-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #000;
+  }
+}
+
+.wd-switch-black-off {
+  animation: wd-switch-black-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-black-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #000;
+  }
+}
+
+.wd-switch-white-on {
+  animation: wd-switch-white-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-white-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
+.wd-switch-white-off {
+  animation: wd-switch-white-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-white-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #fff;
+  }
+}
+
+.wd-switch-pink-on {
+  animation: wd-switch-pink-colorChange-on 0.2s forwards;
+}
+@keyframes wd-switch-pink-colorChange-on {
+  from {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  to {
+    background-color: #FFC0CB;
+  }
+}
+
+.wd-switch-pink-off {
+  animation: wd-switch-pink-colorChange-off 0.2s forwards;
+}
+@keyframes wd-switch-pink-colorChange-off {
+  to {
+    background-color: rgb(244.8, 244.8, 245.9);
+  }
+  from {
+    background-color: #FFC0CB;
+  }
+}

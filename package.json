@@ -1,0 +1,35 @@
+{
+  "name": "weird-dream-ui",
+  "version": "0.1.0",
+  "description": "weird simple UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"cd ./examples & vite",
+    "build:wd": "gulp -f packages/components/script/build/index.ts",
+    "publish:wd": "gulp -f packages/components/script/publish/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-sass": "^5.0.4",
+    "@types/node": "^22.10.1",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^6.0.0",
+    "release-it": "^17.10.0",
+    "sass": "^1.80.6",
+    "sucrase": "^3.35.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9",
+    "vite-plugin-dts": "1.4.1",
+    "vue": "^3.5.12"
+  },
+  "dependencies": {
+    "weird-dream-ui": "^0.1.2"
+  }
+}

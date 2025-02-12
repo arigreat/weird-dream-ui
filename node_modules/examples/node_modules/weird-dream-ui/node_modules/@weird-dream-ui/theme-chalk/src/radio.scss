@@ -1,0 +1,64 @@
+@use './mixins/mixins.scss' as *;
+@use './mixins/utils.scss' as *;
+@use './common/var.scss' as *;
+
+@include b(radio){
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+    &:first-of-type, &+& {
+        margin-right: 20px;
+    }
+
+    @include m(input){
+        &[type=radio]{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    @include m(label){
+        @include utils-user-select(none);
+        display: inline-block;
+        color:$checkbox-font-color;
+        padding-left: 5px;
+        @include when(checked){
+            color: $switch-primary-color;
+        }
+    }
+
+    @include m(button){
+        width: $radio-button-round;
+        height: $radio-button-round;
+        border: 1px $radio-default-color solid;
+        border-radius: 100%;
+        display: inline-block;
+
+        @include when(checked){
+            border-color: $radio-button-full-color;
+            background: radial-gradient(circle at center,$color-white 30%,$radio-button-full-color 31% 100%);
+            animation: radio-button-checked-animation $radio-button-checked-animation-time forwards;
+
+            @include keyframes(radio-button-checked-animation){
+                0%{
+                    background: radial-gradient(circle at center,$radio-button-full-color 0% 100%);
+                }
+                25%{
+                    background: radial-gradient(circle at center,$color-white 7%,$radio-button-full-color 8% 100%);
+                }
+                50%{
+                    background: radial-gradient(circle at center,$color-white 15%,$radio-button-full-color 16% 100%);
+                }
+                75%{
+                    background: radial-gradient(circle at center,$color-white 23%,$radio-button-full-color 24% 100%);
+                }
+                100%{
+                    background: radial-gradient(circle at center,$color-white 30%,$radio-button-full-color 31% 100%);
+                }
+            }
+        }
+    }
+}

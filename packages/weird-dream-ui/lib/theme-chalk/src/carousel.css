@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*
+    消除元素浮动
+    利用伪元素的clearboth
+*************************/
+/* Transition
+-------------------------- */
+/* Color #177DDC
+-------------------------- */
+/* light */
+/*
+$color-primary: #1890FF !default;
+$color-success: #52C41A !default;
+$color-warning: #FAAD14 !default;
+$color-danger: #F5222D !default;
+*/
+/* dark */
+/*
+$color-primary: #177DDC !default;
+$color-success: #49AA19 !default;
+$color-warning: #D89614 !default;
+$color-danger: #D32029 !default;
+$color-info: #7D7D7D !default;
+*/
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* carousel
+-------------------------- */
+/* joystick
+-------------------------- */
+/* switch
+-------------------------- */
+/* slidebar
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义 */
+/* height||Other|4 */
+/* height||Other|4 */
+/* Dialog
+-------------------------- */
+/* / fontLineHeight||LineHeight|2 */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+-------------------------- */
+/* Slider
+-------------------------- */
+/* / height|1|Other|4 */
+/* Steps
+-------------------------- */
+/* Menu
+-------------------------- */
+/* Rate
+-------------------------- */
+/* / height||Other|3 */
+/* / margin||Spacing|2 */
+/* DatePicker
+-------------------------- */
+/* Loading
+-------------------------- */
+/* Scrollbar
+-------------------------- */
+/* Carousel
+-------------------------- */
+/* / width||Other|4 */
+/* Collapse
+-------------------------- */
+/* Transfer
+-------------------------- */
+/* Header
+  -------------------------- */
+/* Footer
+-------------------------- */
+/* Main
+-------------------------- */
+/* Timeline
+-------------------------- */
+/* Backtop
+-------------------------- */
+/* Link
+-------------------------- */
+/* Calendar
+-------------------------- */
+/* / border||Other|4 */
+/* / color||Other|4 */
+/* Form
+-------------------------- */
+/* Input
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Avatar
+-------------------------- */
+/* Empty
+-------------------------- */
+/* Descriptions
+-------------------------- */
+/* Skeleton 
+-------------------------- */
+/* Svg
+--------------- */
+/* Result
+-------------------------- */
+/* Break-point
+-------------------------- */
+.wd-carousel {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 0 8px rgba(0, 0, 0, 0.2), 0 0 12px rgba(0, 0, 0, 0.25);
+  justify-content: start;
+  align-items: center;
+}
+.wd-carousel > .wd-carouselImgbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transform: translateX(var(--transformOldX));
+}
+.wd-carousel > .wd-carouselImgbox.is-moving {
+  animation: CarouselScrollRight 0.5s forwards ease-in-out;
+}
+@keyframes CarouselScrollRight {
+  0% {
+    transform: translateX(var(--transformOldX, "0"));
+  }
+  100% {
+    transform: translateX(var(--transformNewX, "0"));
+  }
+}
+
+.wd-carousel > .wd-carouselImgbox.is-resetting {
+  animation: CarouselScrollReset 0.01s forwards ease-in-out;
+}
+@keyframes CarouselScrollReset {
+  0%, 100% {
+    transform: translateX(var(--transformOldX, "0"));
+  }
+}
+
+.wd-carousel > .wd-carouselButtonbox {
+  position: absolute;
+  top: 93%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.wd-carousel > .wd-carouselButtonbox > .wd-carouselButton {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: rgb(193.8, 193.8, 200.4);
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+}
+.wd-carousel > .wd-carouselButtonbox > .wd-carouselButton:hover {
+  background-color: #fff !important;
+}
+.wd-carousel > .wd-carouselButtonbox > .wd-carouselButtonCurrent {
+  background-color: #fff !important;
+}
+.wd-carousel.is-round {
+  border-radius: 20px;
+}

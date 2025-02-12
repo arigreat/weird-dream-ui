@@ -1,0 +1,21 @@
+import wdButton from './src/button';
+import wdButtonGroup from './src/button-group';
+import wdCarousel from './src/carousel';
+import wdCarouselImg from './src/carousel-img';
+import wdCheckbox from './src/checkbox';
+import wdCheckboxGroup from './src/checkbox-group';
+import wdForm from './src/form';
+import wdFormItem from './src/form-item';
+import wdInput from './src/input';
+import wdJoystick from './src/joystick';
+import wdOption from './src/option';
+import wdRadio from './src/radio';
+import wdRadioGroup from './src/radio-group';
+import wdSelect from './src/select';
+import wdSlidebar from './src/slidebar';
+import wdSwitch from './src/switch';
+export { wdButton, wdButtonGroup, wdCarousel, wdCarouselImg, wdCheckbox, wdCheckboxGroup, wdForm, wdFormItem, wdInput, wdJoystick, wdOption, wdRadio, wdRadioGroup, wdSelect, wdSlidebar, wdSwitch, };
+declare const _default: {
+    install: (app: App) => void;
+};
+export default _default;
