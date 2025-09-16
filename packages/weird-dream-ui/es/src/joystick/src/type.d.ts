@@ -17,4 +17,8 @@ export declare const joystickProps: {
     valueY: {
         type: NumberConstructor;
     };
+    debounce: {
+        type: NumberConstructor;
+        default: number;
+    };
 };

@@ -22,6 +22,10 @@ const joystickProps = {
   },
   valueY: {
     type: Number
+  },
+  debounce: {
+    type: Number,
+    default: 5
   }
 };
 exports.JoystickColor = JoystickColor;

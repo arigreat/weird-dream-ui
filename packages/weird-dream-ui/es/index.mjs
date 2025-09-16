@@ -14,6 +14,54 @@ import { wdRadioGroup } from "./src/radio-group/index.mjs";
 import { wdSelect } from "./src/select/index.mjs";
 import { wdSlidebar } from "./src/slidebar/index.mjs";
 import { wdSwitch } from "./src/switch/index.mjs";
+wdButton.install = function(app) {
+  app.component("wdButton", wdButton);
+};
+wdButtonGroup.install = function(app) {
+  app.component("wdButtonGroup", wdButtonGroup);
+};
+wdCarousel.install = function(app) {
+  app.component("wdCarousel", wdCarousel);
+};
+wdCarouselImg.install = function(app) {
+  app.component("wdCarouselImg", wdCarouselImg);
+};
+wdCheckbox.install = function(app) {
+  app.component("wdCheckbox", wdCheckbox);
+};
+wdCheckboxGroup.install = function(app) {
+  app.component("wdCheckboxGroup", wdCheckboxGroup);
+};
+wdForm.install = function(app) {
+  app.component("wdForm", wdForm);
+};
+wdFormItem.install = function(app) {
+  app.component("wdFormItem", wdFormItem);
+};
+wdInput.install = function(app) {
+  app.component("wdInput", wdInput);
+};
+wdJoystick.install = function(app) {
+  app.component("wdJoystick", wdJoystick);
+};
+wdOption.install = function(app) {
+  app.component("wdOption", wdOption);
+};
+wdRadio.install = function(app) {
+  app.component("wdRadio", wdRadio);
+};
+wdRadioGroup.install = function(app) {
+  app.component("wdRadioGroup", wdRadioGroup);
+};
+wdSelect.install = function(app) {
+  app.component("wdSelect", wdSelect);
+};
+wdSlidebar.install = function(app) {
+  app.component("wdSlidebar", wdSlidebar);
+};
+wdSwitch.install = function(app) {
+  app.component("wdSwitch", wdSwitch);
+};
 const install = function(app) {
   app.component("wdButton", wdButton);
   app.component("wdButtonGroup", wdButtonGroup);

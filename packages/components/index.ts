@@ -16,6 +16,70 @@ import wdSelect from './src/select'
 import wdSlidebar from './src/slidebar'
 import wdSwitch from './src/switch'
 
+wdButton.install = function (app: App): void {
+  app.component('wdButton', wdButton)
+}
+
+wdButtonGroup.install = function (app: App): void {
+  app.component('wdButtonGroup', wdButtonGroup)
+}
+
+wdCarousel.install = function (app: App): void {
+  app.component('wdCarousel', wdCarousel)
+}
+
+wdCarouselImg.install = function (app: App): void {
+  app.component('wdCarouselImg', wdCarouselImg)
+}
+
+wdCheckbox.install = function (app: App): void {
+  app.component('wdCheckbox', wdCheckbox)
+}
+
+wdCheckboxGroup.install = function (app: App): void {
+  app.component('wdCheckboxGroup', wdCheckboxGroup)
+}
+
+wdForm.install = function (app: App): void {
+  app.component('wdForm', wdForm)
+}
+
+wdFormItem.install = function (app: App): void {
+  app.component('wdFormItem', wdFormItem)
+}
+
+wdInput.install = function (app: App): void {
+  app.component('wdInput', wdInput)
+}
+
+wdJoystick.install = function (app: App): void {
+  app.component('wdJoystick', wdJoystick)
+}
+
+wdOption.install = function (app: App): void {
+  app.component('wdOption', wdOption)
+}
+
+wdRadio.install = function (app: App): void {
+  app.component('wdRadio', wdRadio)
+}
+
+wdRadioGroup.install = function (app: App): void {
+  app.component('wdRadioGroup', wdRadioGroup)
+}
+
+wdSelect.install = function (app: App): void {
+  app.component('wdSelect', wdSelect)
+}
+
+wdSlidebar.install = function (app: App): void {
+  app.component('wdSlidebar', wdSlidebar)
+}
+
+wdSwitch.install = function (app: App): void {
+  app.component('wdSwitch', wdSwitch)
+}
+
 export{
     wdButton,
     wdButtonGroup,

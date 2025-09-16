@@ -16,6 +16,54 @@ const index$d = require("./src/radio-group/index.js");
 const index$e = require("./src/select/index.js");
 const index$f = require("./src/slidebar/index.js");
 const index$g = require("./src/switch/index.js");
+index$1.wdButton.install = function(app) {
+  app.component("wdButton", index$1.wdButton);
+};
+index$2.wdButtonGroup.install = function(app) {
+  app.component("wdButtonGroup", index$2.wdButtonGroup);
+};
+index$3.wdCarousel.install = function(app) {
+  app.component("wdCarousel", index$3.wdCarousel);
+};
+index$4.wdCarouselImg.install = function(app) {
+  app.component("wdCarouselImg", index$4.wdCarouselImg);
+};
+index$5.wdCheckbox.install = function(app) {
+  app.component("wdCheckbox", index$5.wdCheckbox);
+};
+index$6.wdCheckboxGroup.install = function(app) {
+  app.component("wdCheckboxGroup", index$6.wdCheckboxGroup);
+};
+index$7.wdForm.install = function(app) {
+  app.component("wdForm", index$7.wdForm);
+};
+index$8.wdFormItem.install = function(app) {
+  app.component("wdFormItem", index$8.wdFormItem);
+};
+index$9.wdInput.install = function(app) {
+  app.component("wdInput", index$9.wdInput);
+};
+index$a.wdJoystick.install = function(app) {
+  app.component("wdJoystick", index$a.wdJoystick);
+};
+index$b.wdOption.install = function(app) {
+  app.component("wdOption", index$b.wdOption);
+};
+index$c.wdRadio.install = function(app) {
+  app.component("wdRadio", index$c.wdRadio);
+};
+index$d.wdRadioGroup.install = function(app) {
+  app.component("wdRadioGroup", index$d.wdRadioGroup);
+};
+index$e.wdSelect.install = function(app) {
+  app.component("wdSelect", index$e.wdSelect);
+};
+index$f.wdSlidebar.install = function(app) {
+  app.component("wdSlidebar", index$f.wdSlidebar);
+};
+index$g.wdSwitch.install = function(app) {
+  app.component("wdSwitch", index$g.wdSwitch);
+};
 const install = function(app) {
   app.component("wdButton", index$1.wdButton);
   app.component("wdButtonGroup", index$2.wdButtonGroup);

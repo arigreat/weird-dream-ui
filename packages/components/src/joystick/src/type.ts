@@ -22,6 +22,10 @@ export const joystickProps = {
   },
   valueY:{
     type:Number,
+  },
+  debounce:{
+    type:Number,
+    default:5
   }
 }
 // export type JoystickProps = ExtractPropTypes<typeof joystickProps>
